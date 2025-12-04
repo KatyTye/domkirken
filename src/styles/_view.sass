@@ -1,0 +1,19 @@
+// STYLES FOR VIEW COMPONENT
+@use "./_variables.sass" as var
+
+.dialog-menu
+	border: none
+
+	&__background
+		top: 0
+		left: 0
+		z-index: 5
+		width: 100dvw
+		height: 100dvh
+		position: fixed
+		background: var.$blur-background-color
+
+	&__content
+		z-index: 10
+		width: 60dvw
+		position: fixed
