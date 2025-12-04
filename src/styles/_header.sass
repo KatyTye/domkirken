@@ -1,33 +1,42 @@
+// STYLES FOR HEADER COMPONENT
+@use "./_variables.sass" as var
+
 .top-content
+	padding: 30px
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	padding: 0 30px
+	color: light-dark(var.$light-primary-text-color, var.$dark-primary-text-color)
+	background: light-dark(var.$light-secondary-background-color, var.$dark-secondary-background-color)
 
 	&__title
-		text-decoration: none
-		color: black
 		display: flex
+		color: inherit
+		text-decoration: none
 		align-items: flex-end
 
-	&__title-logo
-		width: 50px
-		height: 50px
-		padding-bottom: 3px
+		&-logo
+			width: 50px
+			height: 50px
+			padding-bottom: 3px
 
-	&__title-span
-		font-size: 24px
-		font-weight: 700
+		&-span
+			font-size: 24px
+			font-weight: 700
 
 	&__navigation
 		display: flex
 		align-items: flex-end
 		gap: 20px
 
-	&__navigation-redirect
-		text-decoration: none
-		color: black
-		font-weight: 700
+		&-redirect
+			color: inherit
+			font-weight: 700
+			text-decoration: none
+			border-bottom: 2px solid transparent
 
-.active
-	color: grey
+			&:hover, &:active
+				border-bottom: 2px solid light-dark(var.$light-primary-text-color, var.$dark-primary-text-color)
+
+			.active
+				color: light-dark(var.$light-secondary-text-color, var.$dark-secondary-text-color)

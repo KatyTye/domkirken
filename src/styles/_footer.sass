@@ -1,16 +1,30 @@
+// STYLES FOR FOOTER COMPONENT
+@use "./_variables.sass" as var
+
 .bottom-content
-	padding: 50px 0
-	display: flex
-	justify-content: center
-	align-items: center
 	gap: 40px
+	display: flex
+	padding: 30px
+	align-items: center
+	justify-content: center
+	color: light-dark(var.$light-primary-text-color, var.$dark-primary-text-color)
+	background: light-dark(var.$light-secondary-background-color, var.$dark-secondary-background-color)
 
 	&__redirect
-		text-decoration: none
-		color: black
-		font-weight: 700
+		color: inherit
 		font-size: 20px
+		font-weight: 700
+		text-decoration: none
 
-	&__redirect-icon
-		width: 30px
-		height: 30px
+		&-icon
+			width: 30px
+			height: 30px
+
+			&:hover, &:active
+				transform: scale(110%)
+
+.redirect-link
+	border-bottom: 2px solid transparent
+
+	&:hover, &:active
+		border-bottom: 2px solid light-dark(var.$light-primary-text-color, var.$dark-primary-text-color)
