@@ -5,17 +5,28 @@
 
 	&__image
 		width: 100%
-		border: 5px solid black
 
 		&-list
-			gap: 30px
+			gap: 25px
+			padding: 25px
 			display: grid
 			align-items: center
-			flex-direction: column
-			justify-content: center
+			justify-items: center
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 
 		&-holder
-			max-width: 600px
+			width: 30dvw
+			min-width: 250px
+			max-width: 300px
 
 		&-context
 			padding: 10px 0
+			text-align: center
+
+			&:empty
+				display: none
+
+		&-item
+			padding: 5px
+			width: fit-content
+			border: 5px solid light-dark(var.$light-primary-text-color, var.$dark-primary-text-color)
